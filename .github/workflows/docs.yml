@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install uv
-      - run: uv sync && uv run build.py docs/
+      - run: uv sync && uv run build.py src/
       - run: uv run zensical build --clean
       - uses: actions/upload-pages-artifact@v5
         with:
