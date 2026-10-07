@@ -72,7 +72,7 @@ async def main():
             "* **CCW 0xx**\r\n"
             + '\r\n'.join(
                 [
-                    f"  * [CCW-{str(ccw.identifier).rjust(3, '0')}]({f'ccw_{ccw.identifier}.md'})"
+                    f"\t* [CCW-{str(ccw.identifier).rjust(3, '0')}]({f'ccw_{ccw.identifier}.md'})"
                     for ccw in sort(list(filter(lambda ccw: ccw.identifier < 100, ccw_list)), lambda ccw: ccw.identifier)
                 ]
             )
